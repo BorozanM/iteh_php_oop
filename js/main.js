@@ -1,4 +1,4 @@
-function deletePhone( deleteid){//1
+function deleteLaptop( deleteid){//1
     $.ajax({
         url: 'handler/delete.php',
         type: 'post',

@@ -52,7 +52,7 @@
             <td> <?php echo $row['price']?></td>
             <td> <?php echo $row['email']?></td>
             <td>
-            <button type="button" class="btn btn-danger" onclick="deletePhone( <?php echo $row['id']   ?>  )">Delete</button>
+            <button type="button" class="btn btn-danger" onclick="deleteLaptop( <?php echo $row['id']   ?>  )">Delete </button>
             <button type="button" class="btn btn-warning"  data-toggle="modal" data-target="#updateModal" onclick="getDetailsUpdateModal(<?php echo $row['id']?> )" >Update</button></td>
 
             </tr>
