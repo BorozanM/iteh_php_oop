@@ -52,8 +52,7 @@
             <td> <?php echo $row['price']?></td>
             <td> <?php echo $row['email']?></td>
             <td>
-            <button type="button" class="btn btn-danger" onclick="deleteLaptop( <?php echo $row['id']   ?>  )">Delete</button>
-            <button type="button" class="btn btn-warning"  data-toggle="modal" data-target="#updateModal" onclick="getDetailsUpdateModal(<?php echo $row['id']?> )" >Update</button></td>
+           
             </tr>
          
             <?php endwhile;?>
@@ -62,7 +61,121 @@
         </table>
 
     </div> 
-    
+    <footer id="sticky-footer" class="flex-shrink-0 py-4 bg-dark text-white-50">
+        <div class="container text-center">
+        <small>Copyright &copy; Your Website</small>
+        </div>
+    </footer>
+
+
+<!-- Update modal -->
+    <div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="lblUpdateModal" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="titleUpdate">Update mobile laptop</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+
+                        <div class="modal-body">
+                              
+                        <form  id="updateform" style="max-width:500px;margin:auto" method="POST" enctype="multipart/form-data">
+ 
+                            <div class="input-container">
+                                <i class="fa fa-user icon"></i>
+                                <input class="input-field" type="text" placeholder="Model" name="modelupdate" id="modelupdate" required>
+                            </div>
+
+                            <div class="input-container">
+                                <i class="fa fa-pencil icon"></i>
+                                <input class="input-field" type="text" placeholder="Description" name="descriptionupdate" id="descriptionupdate" required>
+                            </div>
+                            
+                            <div class="input-container">
+                                <i class="fa fa-tag icon"></i>
+                                <input class="input-field" type="text" placeholder="Price" name="priceupdate" id="priceupdate" required>
+                            </div>
+                            <input  class="input-field" type="text" id="hiddenData" name ="hiddenData" hidden>
+                       
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary" id="update" name="update"  >  Update</button>
+                            
+                        </div>                   
+                    
+                        </form>
+
+
+                        </div>
+                        
+                       
+                </div>
+            </div>
+        </div>
+<!-- End Update modal -->
+
+
+
+
+
+
+<!-- Add modal -->
+<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="lblUpdateModal" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="titleUpdate">Add mobile laptop</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+
+                        <div class="modal-body">
+                              
+                        <form  id="addform" style="max-width:500px;margin:auto" method="POST" enctype="multipart/form-data">
+ 
+                            <div class="input-container">
+                                <i class="fa fa-user icon"></i>
+                                <input class="input-field" type="text" placeholder="Model" name="model" id="model" required>
+                            </div>
+
+                            <div class="input-container">
+                                <i class="fa fa-pencil icon"></i>
+                                <input class="input-field" type="text" placeholder="Description" name="description" id="description" required>
+                            </div>
+                            
+                            <div class="input-container">
+                                <i class="fa fa-tag icon"></i>
+                                <input class="input-field" type="text" placeholder="Price" name="price" id="price" required>
+                            </div>
+                          
+                       
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary" id="add" name="add"  >  Add</button>
+                            
+                        </div>                   
+                    
+                        </form>
+
+
+                        </div>
+                        
+                       
+                </div>
+            </div>
+        </div>
+<!-- End Add modal -->
+
+
+
+
+
+
+
+
 
 
 
