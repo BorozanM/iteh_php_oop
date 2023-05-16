@@ -52,7 +52,7 @@ class Laptop{
         return $conn->query($query);
 
     }
-
+    
     public static function updateLaptop($laptop,$conn){
 
         $query = "update laptop set model='$laptop->model', description = '$laptop->description', price = $laptop->price where id = $laptop->id";
